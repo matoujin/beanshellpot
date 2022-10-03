@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BeanShell Test Servlet</title>
+    <script>
+        function ImgLoad(){
+            new Image().src="/favicon";
+        }
+        var img = new Image();
+        img.src = "http://127.0.0.1:8080/favicon.ico";
+
+        img.onload = function() {
+
+            ImgLoad();
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>BeanShell Test Servlet</h1>
+BeanShell version: 2.0b1.1
+
+{{changed_h2|safe}}
+{{changed_table|safe}}
+{{changed_return|safe}}
+
+<h2>Script</h2>
+<form method="POST" action="/servlet/~ic/bsh.servlet.BshServlet">
+
+<textarea name="bsh.script" rows="10" cols="80">{{textarea}}</textarea>
+<p>
+Capture Stdout/Stderr:
+<input type="checkbox" name="bsh.servlet.captureOutErr" value="true">
+Display Raw Output:
+<input type="checkbox" name="bsh.servlet.output" value="raw">
+</p><p>
+<input type="submit" value="Evaluate">
+</p></form>
+
+
+
+</body></html>

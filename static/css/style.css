@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+
+}
+body{
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    color: #666666;
+
+}
+a{
+    text-decoration: none;
+    color: #272727;
+
+}
+a:hover{
+    color: #3573e2;
+    /*text-decoration:underline;*/
+}
+
+#logobar{
+    width: 100%;
+    height: 60px;
+    /*background: url("img/logo_nc.png") no-repeat left;*/
+}
+#logo{
+    margin-left: 10%;
+    margin-top: 10px;
+    float: left;
+}
+#lang{
+    width: 200px;
+    height: 60px;
+    margin-right: 10%;
+    float: right;
+    line-height: 60px;
+    text-align: right;
+}
+
+#content{
+    width: 100%;
+    height: 408px;
+    background: url("../img/bg_dahai.png") no-repeat center;
+    vertical-align: middle;
+
+}
+#selectpanel{
+    width: 304px;
+    height: 235px;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    padding: 48px;
+    box-shadow: 1px 1px 6px;
+
+}
+#btn_uclient, #btn_browser{
+    width: 255px;
+    height: 55px;
+    margin: auto;
+    padding-left: 50px;
+
+}
+#btn_uclient{
+    background: url("../img/btn_red.png") center no-repeat;
+}
+
+#btn_uclient:hover{
+    background: url("../img/btn_red_hover.png") center no-repeat;
+}
+#btn_uclient:active{
+    background: url("../img/btn_red_click.png") center no-repeat;
+}
+#uclient_tips{
+    width: 285px;
+    height: 80px;
+    padding: 10px;
+    line-height: 18px;
+
+}
+#btn_uclient_txt, #btn_browser_txt{
+    width: 200px;
+    height: 55px;
+    color: white;
+    font-size: 14px;
+    margin:auto 10px;
+    padding-left: 30px;
+    line-height: 55px;
+
+}
+#btn_uclient_txt{
+    background: url("../img/icon_uclient.png") left center no-repeat;
+}
+#btn_browser_txt{
+    background: url("../img/icon_web.png") left center no-repeat;
+}
+
+#btn_browser{
+    background: url("../img/btn_blue.png") center no-repeat;
+
+}
+#btn_browser:hover{
+    background: url("../img/btn_blue_hover.png") center no-repeat;
+}
+#btn_browser:active{
+    background: url("../img/btn_blue_click.png") center no-repeat;
+}
+
+#chkpanel{
+    width: 285px;
+    height: 20px;
+    padding: 10px;
+    line-height: 20px;
+}
+#chkbox_jumpme{
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+
+}
+#chkpanel span{
+    width: 200px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#introduction{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+div[id^="introblock"]{
+    width: 340px;
+    height: 150px;
+    padding: 150px 10px 10px 10px;
+    margin: 25px auto;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+
+}
+#introblock1{
+    background: url("../img/introduct1.png") no-repeat top center;
+}
+#introblock2{
+    background: url("../img/introduct2.png") no-repeat top center;
+}
+#introblock3{
+    background: url("../img/introduct3.png") no-repeat top center;
+}
+.titletxt{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.intro_txt{
+    font-size: 14px;
+    line-height: 25px;
+    text-align: left;
+}
+
+#browserhelp{
+    width: 100%;
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+div[id^="step"]{
+    width: 350px;
+    /*height: 320px;*/
+    padding: 250px 10px 10px 10px;
+    /*margin: 25px auto;*/
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+
+
+}
+#step1{
+    background: url("../img/step1.png") no-repeat top center;
+}
+#step2{
+    background: url("../img/step2.png") no-repeat top center;
+}
+#step3{
+    background: url("../img/step3.png") no-repeat top center;
+}
+
+#step1_en{
+    background: url("../img/en/step1.png") no-repeat top center;
+}
+#step2_en{
+    background: url("../img/en/step2.png") no-repeat top center;
+}
+#step3_en{
+    background: url("../img/en/step3.png") no-repeat top center;
+}
+
+.substeptitle{
+    width: 165px;
+    vertical-align: top;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+}
+.substeptxt{
+    width: 155px;
+    height: 50px;
+    vertical-align: bottom;
+    float: left;
+    padding: 15px 10px 10px;
+    text-align: left;
+
+}
+.redtxt{
+    color: #f06a6c;
+}
+
+.footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}

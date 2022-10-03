@@ -1,0 +1,151 @@
+<html><head lang="en">
+    <meta charset="UTF-8">
+    <title>Yonyou NC</title>
+    <link rel="SHORTCUT ICON" href="static/img/logo_small.ico">
+    <link rel="BOOKMARK" href="img/logo_small.ico">
+
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script>
+        function init(){
+            //判断操作系统
+            var os = navigator.platform;
+//            var userAgent = navigator.userAgent;
+//            var info  = "";
+//            var tempArray  = "";
+            if(os.indexOf("Mac") > -1){
+
+                document.getElementById("adownload").href = "UClient.dmg";
+
+            }
+
+            //判断是否需要跳过本页
+            if(localStorage.isJumpme == null) {
+                localStorage.isJumpme ="false";
+
+            } else {
+                if(localStorage.isJumpme == "true") {
+                    //直接跳到nc登录页
+                    window.location.href='./login.html';
+                }
+            }
+
+            if(localStorage.isJumpme == null) {
+                localStorage.isJumpme ="false";
+
+            } else {
+                if(localStorage.isJumpme == "true") {
+                    //直接跳到nc登录页
+                    window.location.href="../login.jsp";
+                }
+            }
+
+            //判断当前系统语种，自动跳转语言
+            var sLang = navigator.language;
+            if(sLang !=null)
+            {
+                sLang = sLang.toLowerCase();
+                if(sLang == "zh-cn"){
+                    //不做处理
+
+                } else if(sLang == "zh-tw"){
+                    window.location.href="index_tc.jsp";
+                } else {
+                    window.location.href="index_en.jsp";
+                }
+
+            }
+
+        }
+
+        function ChangeJumpmeBox(){
+            localStorage.isJumpme = document.getElementById("chkbox_jumpme").checked;
+
+        }
+
+        function showTips(){
+
+            if(document.getElementById("chkbox_jumpme").checked) {
+                //提醒
+                alert("温馨提示：勾选本选项后，下次登录时将不再显示本页面！若需再次显示，您可以清除浏览器缓存。");
+            }
+
+        }
+
+        function showhelp(){
+            document.getElementById("introduction").style.display ="none";
+            document.getElementById("browserhelp").style.display = "block";
+        }
+        function hidehelp(){
+            document.getElementById("browserhelp").style.display  ="none";
+            document.getElementById("introduction").style.display = "block";
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    <div id="logobar">
+        <img id="logo" src="static/img/logo.png">
+        <div id="lang"><span class="langcur">简体中文</span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">繁體中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">English</a></div>
+    </div>
+    <div id="content">
+        <div id="selectpanel">
+            <a id="adownload" href="">
+                <div id="btn_uclient" onmouseover="hidehelp()">
+                    <div id="btn_uclient_txt">UClient客户端下载</div>
+                </div>
+            </a>
+            <div id="uclient_tips">UClient客户端：一键登录、整合应用、智能升级、简洁应用，为您提供极佳操作体验。<a href="http://uclient.yonyou.com" target="_blank">了解详情 &gt;&gt;</a> </div>
+            <a href="">
+                <div id="btn_browser" onmouseover="showhelp()" onclick="ChangeJumpmeBox()">
+                    <div id="btn_browser_txt">继续浏览器登录</div>
+                </div>
+            </a>
+            <div id="chkpanel">
+                <input id="chkbox_jumpme" type="checkbox" name="jumpme" onchange="showTips()"><span> 以后跳过本页</span>
+            </div>
+
+        </div>
+    </div>
+    <div id="introduction">
+        <div id="introblock1">
+            <p class="titletxt">连接</p>
+            <p class="intro_txt">UClient 提供全新客户端，消除浏览器依赖，完成用户与企业应用的链接优化，并支持企业应用在终端上的自动升级。</p>
+        </div>
+        <div id="introblock2">
+            <p class="titletxt">体验</p>
+            <p class="intro_txt">UClient 打造一个面向企业的端服务平台，提供改善体验相关的端服务，并对提供的服务进行应用优化。</p>
+        </div>
+        <div id="introblock3">
+            <p class="titletxt">社交</p>
+            <p class="intro_txt">UClient 通过嵌入社交协同能力，建立企业用户之间的连接，提供企业间数据共享和连接的服务，形成基于企业服务云平台的企业社交网络。</p>
+        </div>
+    </div>
+
+    <div id="browserhelp">
+        <div id="step1">
+            <div class="substeptitle">
+                <span class="titletxt">第</span><span class="titletxt redtxt">1</span><span class="titletxt">步</span>
+            </div>
+            <div class="substeptxt">浏览器登录，先安装Java运行程序</div>
+        </div>
+        <div id="step2">
+            <div class="substeptitle">
+                <span class="titletxt">第</span><span class="titletxt redtxt">2</span><span class="titletxt">步</span>
+            </div>
+            <div class="substeptxt">降低Java安全级别或添加网址到“例外网站”列表</div>
+        </div>
+        <div id="step3">
+            <div class="substeptitle">
+                <span class="titletxt">第</span><span class="titletxt redtxt">3</span><span class="titletxt">步</span>
+            </div>
+            <div class="substeptxt">接受运行程序</div>
+        </div>
+    </div>
+
+    <div class="footer">版权所有© 2015 用友网络科技股份有限公司</div>
+
+
+
+
+</body></html>
